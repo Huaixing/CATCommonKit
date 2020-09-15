@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		138F48948605981103CAEE17 /* Pods_CATCommonKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CATCommonKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		342F9DACF993A8C08282FFE7 /* Pods-CATCommonKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATCommonKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CATCommonKit_Example/Pods-CATCommonKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		579C9448BC95188C98B9119D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		579C9448BC95188C98B9119D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CATCommonKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATCommonKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,13 +60,13 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7FAF6FA0D691AC2E212C86A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7FAF6FA0D691AC2E212C86A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		822B2F5EC819EC8CCCCA4899 /* Pods_CATCommonKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CATCommonKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C361D9A3EAE831998EBE9C0 /* Pods-CATCommonKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATCommonKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CATCommonKit_Tests/Pods-CATCommonKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB84A4D25FD12F84F5F18273 /* Pods-CATCommonKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATCommonKit_Example.release.xcconfig"; path = "Target Support Files/Pods-CATCommonKit_Example/Pods-CATCommonKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D7F2F0CE301305B5B460405C /* Pods-CATCommonKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATCommonKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-CATCommonKit_Tests/Pods-CATCommonKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F1C47CF71B9B6BBAAF00E90B /* CATCommonKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CATCommonKit.podspec; path = ../CATCommonKit.podspec; sourceTree = "<group>"; };
+		F1C47CF71B9B6BBAAF00E90B /* CATCommonKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CATCommonKit.podspec; path = ../CATCommonKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,6 @@
 				9C361D9A3EAE831998EBE9C0 /* Pods-CATCommonKit_Tests.debug.xcconfig */,
 				D7F2F0CE301305B5B460405C /* Pods-CATCommonKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -249,6 +248,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Huaixing;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 2P66JWV7UM;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -513,6 +516,7 @@
 			baseConfigurationReference = 342F9DACF993A8C08282FFE7 /* Pods-CATCommonKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2P66JWV7UM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CATCommonKit/CATCommonKit-Prefix.pch";
 				INFOPLIST_FILE = "CATCommonKit/CATCommonKit-Info.plist";
@@ -529,6 +533,7 @@
 			baseConfigurationReference = BB84A4D25FD12F84F5F18273 /* Pods-CATCommonKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2P66JWV7UM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CATCommonKit/CATCommonKit-Prefix.pch";
 				INFOPLIST_FILE = "CATCommonKit/CATCommonKit-Info.plist";
