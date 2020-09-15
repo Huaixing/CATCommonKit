@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CATCommonKit'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'common kit'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ common kit and class
   s.source           = { :git => 'https://github.com/Huaixing/CATCommonKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'CATCommonKit/Classes/**/*'
   
