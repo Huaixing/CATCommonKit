@@ -1,0 +1,27 @@
+PODS:
+  - CATCommonKit (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - CATCommonKit (from `../`)
+  - FBSnapshotTestCase
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  CATCommonKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CATCommonKit: e79d619ced571fcdf34c02bbc7e0dda3f3b7d41f
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: fc8185865cf209afd8475c5500eeec827ab863d1
+
+COCOAPODS: 1.9.3
