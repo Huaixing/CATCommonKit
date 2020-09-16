@@ -9,7 +9,6 @@
 #define CATCommonKit_h
 
 #import <CATCommonKit/NSString+CATSize.h>
-#import <CATCommonKit/NSString+CATBundle.h>
 #import <CATCommonKit/UIView+CATSize.h>
 
 #endif /* CATCommonKit_h */

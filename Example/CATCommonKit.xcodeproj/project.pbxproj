@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DA36EDCA2B2568D7A8AB3EA /* Pods_CATCommonKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 822B2F5EC819EC8CCCCA4899 /* Pods_CATCommonKit_Tests.framework */; };
-		5BA24D6CF664C0893304A579 /* Pods_CATCommonKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 138F48948605981103CAEE17 /* Pods_CATCommonKit_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -24,6 +22,8 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B52DFF4F855684255307E64B /* libPods-CATCommonKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F49CE4522CCACFC0D3538C7E /* libPods-CATCommonKit_Example.a */; };
+		BE3A815018B3ADF34825AC6B /* libPods-CATCommonKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEF8242EF040CA0BC4C9A0C /* libPods-CATCommonKit_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		138F48948605981103CAEE17 /* Pods_CATCommonKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CATCommonKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		342F9DACF993A8C08282FFE7 /* Pods-CATCommonKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATCommonKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-CATCommonKit_Example/Pods-CATCommonKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		579C9448BC95188C98B9119D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CATCommonKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATCommonKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,12 +60,13 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FAF6FA0D691AC2E212C86A7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		822B2F5EC819EC8CCCCA4899 /* Pods_CATCommonKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CATCommonKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BEF8242EF040CA0BC4C9A0C /* libPods-CATCommonKit_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CATCommonKit_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C361D9A3EAE831998EBE9C0 /* Pods-CATCommonKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATCommonKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CATCommonKit_Tests/Pods-CATCommonKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB84A4D25FD12F84F5F18273 /* Pods-CATCommonKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATCommonKit_Example.release.xcconfig"; path = "Target Support Files/Pods-CATCommonKit_Example/Pods-CATCommonKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D7F2F0CE301305B5B460405C /* Pods-CATCommonKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CATCommonKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-CATCommonKit_Tests/Pods-CATCommonKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F1C47CF71B9B6BBAAF00E90B /* CATCommonKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CATCommonKit.podspec; path = ../CATCommonKit.podspec; sourceTree = "<group>"; };
+		F49CE4522CCACFC0D3538C7E /* libPods-CATCommonKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CATCommonKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				5BA24D6CF664C0893304A579 /* Pods_CATCommonKit_Example.framework in Frameworks */,
+				B52DFF4F855684255307E64B /* libPods-CATCommonKit_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				1DA36EDCA2B2568D7A8AB3EA /* Pods_CATCommonKit_Tests.framework in Frameworks */,
+				BE3A815018B3ADF34825AC6B /* libPods-CATCommonKit_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +134,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				138F48948605981103CAEE17 /* Pods_CATCommonKit_Example.framework */,
-				822B2F5EC819EC8CCCCA4899 /* Pods_CATCommonKit_Tests.framework */,
+				F49CE4522CCACFC0D3538C7E /* libPods-CATCommonKit_Example.a */,
+				8BEF8242EF040CA0BC4C9A0C /* libPods-CATCommonKit_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,7 +207,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				9E4D54F0C5CBA4E9976E6177 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,7 +225,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				CA1601F0EDC9F451D14AFCEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,24 +319,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9E4D54F0C5CBA4E9976E6177 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CATCommonKit_Example/Pods-CATCommonKit_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CATCommonKit/CATCommonKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CATCommonKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CATCommonKit_Example/Pods-CATCommonKit_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AF7D66D3F22AD4E60C5949DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,24 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CA1601F0EDC9F451D14AFCEC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CATCommonKit_Tests/Pods-CATCommonKit_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CATCommonKit_Tests/Pods-CATCommonKit_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
