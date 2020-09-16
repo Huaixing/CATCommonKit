@@ -11,6 +11,7 @@
 
 @interface NSString (CATSize)
 
+- (CGFloat)cat_sizeWithFont:(UIFont *)font;
 - (CGSize)cat_sizeWithFont:(UIFont *)font textHeight:(CGFloat)textHeight;
 - (CGSize)cat_sizeWithFont:(UIFont *)font textHeight:(CGFloat)textHeight limitSize:(CGSize)limitSize;
 

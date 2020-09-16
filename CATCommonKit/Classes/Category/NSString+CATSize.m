@@ -10,6 +10,19 @@
 
 @implementation NSString (CATSize)
 
+/// 单行文本宽度，不限宽
+/// @param font 字体
+/// @return 文案宽度
+- (CGFloat)cat_sizeWithFont:(UIFont *)font {
+    if (self.length == 0) {
+        return 0.0;
+    }
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:font forKey:NSFontAttributeName];
+    CGSize size = [self boundingRectWithSize:[UIScreen mainScreen].bounds.size options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dict context:NULL].size;
+    return ceil(size.width);
+}
+
 - (CGSize)cat_sizeWithFont:(UIFont *)font textHeight:(CGFloat)textHeight {
     return [self cat_sizeWithFont:font textHeight:textHeight limitSize:CGSizeZero];
 }
@@ -23,7 +36,6 @@
     }
     NSMutableAttributedString *attText = [[NSMutableAttributedString alloc] initWithString:self];
     [attText addAttribute:NSFontAttributeName value:(font ? font : [UIFont systemFontOfSize:16]) range:NSMakeRange(0, self.length)];
-    [attText addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, self.length)];
     if (textHeight) {
         /// 行高
         [attText addAttribute:NSBaselineOffsetAttributeName value:[NSNumber numberWithDouble:(textHeight - font.lineHeight) / 4] range:NSMakeRange(0, self.length)];
