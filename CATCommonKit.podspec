@@ -11,4 +11,6 @@ common kit and class
   s.source           = { :git => 'https://github.com/Huaixing/CATCommonKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.source_files = 'CATCommonKit/Classes/**/*'
+
+  s.dependency 'MBProgressHUD', '~> 1.2.0'
 end
