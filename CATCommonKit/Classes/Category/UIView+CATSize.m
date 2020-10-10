@@ -117,9 +117,17 @@
         return 0.0;
     }
 }
-
+/// status bar height
 + (CGFloat)statusBarHeight {
     return [UIApplication sharedApplication].statusBarFrame.size.height;
+}
+/// navigation bar height + status bar height
++ (CGFloat)navigationBottomWithNavigationController:(UINavigationController *)navigationController {
+    CGFloat navigationBarHeight = 44.0;
+    if (navigationController) {
+        navigationBarHeight = navigationController.navigationBar.height;
+    }
+    return navigationBarHeight + [self statusBarHeight];
 }
 
 @end

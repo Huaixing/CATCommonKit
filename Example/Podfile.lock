@@ -1,5 +1,5 @@
 PODS:
-  - CATCommonKit (0.1.6)
+  - CATCommonKit (0.1.7)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CATCommonKit: f57db33002a54d6130b894c1c5260da595da47d4
+  CATCommonKit: 37c84701ad523cd90ed06bc31f0a650a50a55ee3
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
 
 PODFILE CHECKSUM: c4292fc294389c40fac6ebc807a728f40935b106

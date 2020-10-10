@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CATCommonKit'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'common kit'
   s.description      = <<-DESC
 common kit and class

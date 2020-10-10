@@ -25,7 +25,10 @@
 
 /// 选择栏底部留白，刘海屏适配
 + (CGFloat)bottomInset;
+/// status bar height
 + (CGFloat)statusBarHeight;
+/// navigation bar height + status bar height
++ (CGFloat)navigationBottomWithNavigationController:(UINavigationController *)navigationController;
 
 @end
 
