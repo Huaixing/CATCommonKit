@@ -1,10 +1,12 @@
 PODS:
-  - CATCommonKit (0.1.7)
+  - CATCommonKit (0.1.9):
+    - MBProgressHUD (~> 1.2.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
+  - MBProgressHUD (1.2.0)
 
 DEPENDENCIES:
   - CATCommonKit (from `../`)
@@ -13,14 +15,16 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FBSnapshotTestCase
+    - MBProgressHUD
 
 EXTERNAL SOURCES:
   CATCommonKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CATCommonKit: 37c84701ad523cd90ed06bc31f0a650a50a55ee3
+  CATCommonKit: a9a3f83f802a619ca373aa6f3f7f3f6356fa7d80
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
 PODFILE CHECKSUM: c4292fc294389c40fac6ebc807a728f40935b106
 

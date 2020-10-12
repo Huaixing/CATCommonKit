@@ -13,7 +13,7 @@
 /// 单行文本宽度，不限宽
 /// @param font 字体
 /// @return 文案宽度
-- (CGFloat)cat_sizeWithFont:(UIFont *)font {
+- (CGFloat)cat_widthWithFont:(UIFont *)font {
     if (self.length == 0) {
         return 0.0;
     }
