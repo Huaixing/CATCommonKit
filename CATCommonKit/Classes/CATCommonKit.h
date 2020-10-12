@@ -10,5 +10,6 @@
 
 #import <CATCommonKit/NSString+CATSize.h>
 #import <CATCommonKit/UIView+CATSize.h>
+#import <CATCommonKit/UIColor+CATDecimal.h>
 
 #endif /* CATCommonKit_h */
