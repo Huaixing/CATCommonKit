@@ -110,12 +110,7 @@
 
 /// 选择栏底部留白，刘海屏适配
 + (CGFloat)bottomInset {
-    if (@available(iOS 11.0, *)) {
-        return [UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom;
-    } else {
-        // Fallback on earlier versions
-        return 0.0;
-    }
+    return [UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom;
 }
 /// status bar height
 + (CGFloat)statusBarHeight {
