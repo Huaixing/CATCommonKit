@@ -6,6 +6,7 @@
 //
 
 #import "CATHUDUtils.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @implementation CATHUDUtils
 
