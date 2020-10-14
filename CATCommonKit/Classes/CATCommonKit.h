@@ -12,4 +12,6 @@
 #import <CATCommonKit/UIView+CATSize.h>
 #import <CATCommonKit/UIColor+CATDecimal.h>
 
+#import <CATCommonKit/CATHUDUtils.h>
+
 #endif /* CATCommonKit_h */
