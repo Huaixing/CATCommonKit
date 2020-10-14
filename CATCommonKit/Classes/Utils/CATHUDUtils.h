@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <MBProgressHUD.h>
 
 @interface CATHUDUtils : NSObject
 

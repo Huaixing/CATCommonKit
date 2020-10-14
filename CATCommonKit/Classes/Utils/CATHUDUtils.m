@@ -7,8 +7,6 @@
 
 #import "CATHUDUtils.h"
 
-#import <MBProgressHUD.h>
-
 @implementation CATHUDUtils
 
 + (void)showToastWithMessage:(NSString *)message {
