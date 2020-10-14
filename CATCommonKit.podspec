@@ -13,4 +13,7 @@ common kit and class
   s.source_files = 'CATCommonKit/Classes/**/*'
 
   s.dependency 'MBProgressHUD', '~> 1.2.0'
+
+
+  s.frameworks = 'Foundation', 'UIKit'
 end
