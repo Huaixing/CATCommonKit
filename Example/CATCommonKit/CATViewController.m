@@ -59,8 +59,15 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    NSDate *now = [NSDate date];
+    
+    NSString  *dateString = @"2019-09-16 13:00:00";
+    NSDate *date1 = [CATDateUtils dateFromDateString:dateString];
     NSDate *now = [NSDate date];
-    NSLog(@"--- = %@", [now dateTimeStringWithStyle:CATDateShortDateStyle]);
+    
+    
+    NSDateComponents *cmp = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:date1 toDate:now options:0];
+    NSLog(@"--- = %ld", (long)cmp.month);
 }
 
 @end
