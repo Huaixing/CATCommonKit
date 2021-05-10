@@ -4,7 +4,6 @@ platform :ios, '11.0'
 
 target 'CATCommonKit_Example' do
   pod 'CATCommonKit', :path => '../'
-  pod 'MBProgressHUD', '~> 1.2.0'
 
   target 'CATCommonKit_Tests' do
     inherit! :search_paths

@@ -25,9 +25,23 @@
 /// 普通文本在指定区域size中的所占尺寸
 /// 主要用于计算单行普通文本的宽度
 /// @param font 字体
-/// @param limitSize 指定限制区域
 /// @return 普通文本所占区域
-- (CGSize)cat_sizeWithFont:(UIFont *)font limitSize:(CGSize)limitSize;
+- (CGSize)cat_sizeWithFont:(UIFont *)font;
+
+/// 普通文本在指定区域size中的所占尺寸
+/// 主要用于计算多行普通文本的宽度。无行间距
+/// @param font 字体
+/// @param limitWidth 限宽
+/// @return 普通文本所占区域
+- (CGSize)cat_sizeWithFont:(UIFont *)font limitWidth:(CGFloat)limitWidth;
+
+/// 普通文本在指定区域size中的所占尺寸
+/// 主要用于计算多行普通文本的宽度。无行间距
+/// @param font 字体
+/// @param limitWidth 限宽
+/// @param limitLines 限行
+/// @return 普通文本所占区域
+- (CGSize)cat_sizeWithFont:(UIFont *)font limitWidth:(CGFloat)limitWidth limitLines:(NSUInteger)limitLines;
 
 @end
 

@@ -109,20 +109,33 @@
 }
 
 /// 选择栏底部留白，刘海屏适配
-+ (CGFloat)bottomInset {
++ (CGFloat)safeAreaInsetsBottom {
     return [UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom;
 }
+
+/// 选择栏顶部留白，刘海屏适配
++ (CGFloat)safeAreaInsetsTop {
+    return [UIApplication sharedApplication].keyWindow.safeAreaInsets.top;
+}
+
 /// status bar height
 + (CGFloat)statusBarHeight {
-    return [UIApplication sharedApplication].statusBarFrame.size.height;
+    float statusBarHeight = 0;
+    if (@available(iOS 13.0, *)) {
+        UIStatusBarManager *statusBarManager = [UIApplication sharedApplication].windows.firstObject.windowScene.statusBarManager;
+        statusBarHeight = statusBarManager.statusBarFrame.size.height;
+    } else {
+        statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+    }
+    return statusBarHeight;
 }
 /// navigation bar height + status bar height
-+ (CGFloat)navigationBottomWithNavigationController:(UINavigationController *)navigationController {
-    CGFloat navigationBarHeight = 44.0;
-    if (navigationController) {
-        navigationBarHeight = navigationController.navigationBar.height;
-    }
-    return navigationBarHeight + [self statusBarHeight];
-}
+//+ (CGFloat)navigationBottomWithNavigationController:(UINavigationController *)navigationController {
+//    CGFloat navigationBarHeight = 44.0;
+//    if (navigationController) {
+//        navigationBarHeight = navigationController.navigationBar.height;
+//    }
+//    return navigationBarHeight + [self statusBarHeight];
+//}
 
 @end

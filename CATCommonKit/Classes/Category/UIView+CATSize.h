@@ -24,11 +24,14 @@
 @property (nonatomic, assign) CGSize  size;
 
 /// 选择栏底部留白，刘海屏适配
-+ (CGFloat)bottomInset;
++ (CGFloat)safeAreaInsetsBottom;
+/// 选择栏顶部留白，刘海屏适配
++ (CGFloat)safeAreaInsetsTop;
+
 /// status bar height
 + (CGFloat)statusBarHeight;
 /// navigation bar height + status bar height
-+ (CGFloat)navigationBottomWithNavigationController:(UINavigationController *)navigationController;
+//+ (CGFloat)navigationBottomWithNavigationController:(UINavigationController *)navigationController;
 
 @end
 

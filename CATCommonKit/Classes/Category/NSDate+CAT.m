@@ -10,6 +10,29 @@
 
 @implementation NSDate (CAT)
 
+/// 将字符串日期”2021-03-02 12:00:00“转化成NSDate
+/// yyyy-MM-dd hh:mm:ss
+/// @param dateString 时间
+/// @return 日期。转化成的日期是零时区时间
++ (NSDate *)dateTimeFromDateString:(NSString *)dateString {
+    NSDateFormatter* fmt = [[NSDateFormatter alloc] init];
+    ///dateFormat没有指定时区（Z），默认是系统所在时区
+    [fmt setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    /// 最终转成的date都是零时区所在的时间
+    return [fmt dateFromString:dateString];
+}
+/// 将字符串日期”2021-03-02“转化成NSDate
+/// yyyy-MM-dd
+/// @param dateString 时间
+/// @return 日期。转化成的日期是零时区时间
++ (NSDate *)dateFromDateString:(NSString *)dateString {
+    NSDateFormatter* fmt = [[NSDateFormatter alloc] init];
+    ///dateFormat没有指定时区（Z），默认是系统所在时区
+    [fmt setDateFormat:@"yyyy-MM-dd"];
+    /// 最终转成的date都是零时区所在的时间
+    return [fmt dateFromString:dateString];
+}
+
 - (BOOL)isToday {
     if (self == nil || ![self isKindOfClass:[NSDate class]]) {
         return NO;
@@ -90,20 +113,20 @@
 }
 
 
+
+
 /// 日期转化成字符串
-/// @param style 日期字符串样式
-- (NSString *)dateTimeStringWithStyle:(CATDateStyle)style {
+/// @param dateFormat 日期字符串样式。
+/// @return 字符串日期。转化成的字符串时间是当前时区的
+- (NSString *)dateTimeStringFromDateFormat:(NSString *)dateFormat {
     if (self == nil || ![self isKindOfClass:[NSDate class]]) {
         return nil;
     }
     
-    NSDateFormatter *formatter = [CATDateUtils dateFormatterWithFormat:@"yyyy-MM-dd HH:mm:ss"];
-    if (style == CATDateShortDateStyle) {
-        formatter = [CATDateUtils dateFormatterWithFormat:@"yyyy-MM-dd"];
-    } else if (style == CATDateShortTimeStyle) {
-        formatter = [CATDateUtils dateFormatterWithFormat:@"HH:mm:ss"];
-    }
-    return [formatter stringFromDate:self];
+    NSDateFormatter* fmt = [[NSDateFormatter alloc] init];
+    fmt.timeZone = [NSTimeZone systemTimeZone];
+    fmt.dateFormat = dateFormat;
+    return [fmt stringFromDate:self];
 }
 
 @end

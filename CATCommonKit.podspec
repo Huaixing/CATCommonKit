@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'CATCommonKit'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'common kit'
   s.description      = <<-DESC
 common kit and class
@@ -11,9 +11,6 @@ common kit and class
   s.source           = { :git => 'https://github.com/Huaixing/CATCommonKit.git', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
   s.source_files = 'CATCommonKit/Classes/**/*'
-
-  s.dependency 'MBProgressHUD', '~> 1.2.0'
-
 
   s.frameworks = 'Foundation', 'UIKit'
 end

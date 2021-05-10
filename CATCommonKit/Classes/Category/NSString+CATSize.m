@@ -20,7 +20,7 @@
     }
     NSMutableAttributedString *attText = [[NSMutableAttributedString alloc] initWithString:self];
     attText.font = (font ? font : [UIFont systemFontOfSize:16]);
-    attText.lineSpacing = lineSpace;
+    attText.lineSpacing = lineSpace - (attText.font.lineHeight - attText.font.pointSize);
     attText.lineBreakMode = NSLineBreakByTruncatingTail;
     return attText;
 }
@@ -44,19 +44,53 @@
 /// 普通文本在指定区域size中的所占尺寸
 /// 主要用于计算单行普通文本的宽度
 /// @param font 字体
-/// @param limitSize 指定限制区域
 /// @return 文本所占区域
-- (CGSize)cat_sizeWithFont:(UIFont *)font limitSize:(CGSize)limitSize {
+- (CGSize)cat_sizeWithFont:(UIFont *)font {
     if (self.length == 0) {
         return CGSizeZero;
     }
-    if (limitSize.height <= 0) {
-        limitSize.height = MAXFLOAT;
-    }
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setObject:font forKey:NSFontAttributeName];
-    CGSize size = [self boundingRectWithSize:limitSize options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dict context:NULL].size;
+    UILabel *label = [[UILabel alloc] init];
+    label.font = font;
+    label.text = self;
+    [label sizeToFit];
+    CGSize size = CGSizeMake(ceil(label.frame.size.width), ceil(label.frame.size.height));
     return size;
 }
 
+/// 普通文本在指定区域size中的所占尺寸
+/// 主要用于计算多行普通文本的宽度。无行间距
+/// @param font 字体
+/// @param limitWidth 限宽
+/// @return 普通文本所占区域
+- (CGSize)cat_sizeWithFont:(UIFont *)font limitWidth:(CGFloat)limitWidth {
+    if (self.length == 0) {
+        return CGSizeZero;
+    }
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, limitWidth, 0)];
+    label.numberOfLines = 0;
+    label.font = font;
+    label.text = self;
+    [label sizeToFit];
+    CGSize size = CGSizeMake(ceil(label.frame.size.width), ceil(label.frame.size.height));
+    return size;
+}
+
+/// 普通文本在指定区域size中的所占尺寸
+/// 主要用于计算多行普通文本的宽度。无行间距
+/// @param font 字体
+/// @param limitWidth 限宽
+/// @param limitLines 限行
+/// @return 普通文本所占区域
+- (CGSize)cat_sizeWithFont:(UIFont *)font limitWidth:(CGFloat)limitWidth limitLines:(NSUInteger)limitLines {
+    if (self.length == 0) {
+        return CGSizeZero;
+    }
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, limitWidth, 0)];
+    label.numberOfLines = limitLines;
+    label.font = font;
+    label.text = self;
+    [label sizeToFit];
+    CGSize size = CGSizeMake(ceil(label.frame.size.width), ceil(label.frame.size.height));
+    return size;
+}
 @end

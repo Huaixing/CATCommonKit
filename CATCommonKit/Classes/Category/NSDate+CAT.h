@@ -7,19 +7,20 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, CATDateStyle) {
-    /// yyyy-MM-dd HH:mm:ss
-    CATDateFullDateTimeStyle,
-    /// yyyy-MM-dd
-    CATDateShortDateStyle,
-    /// HH:mm:ss
-    CATDateShortTimeStyle,
-};
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (CAT)
 
+/// 将字符串日期”2021-03-02 12:00:00“转化成NSDate
+/// yyyy-MM-dd hh:mm:ss
+/// @param dateString 时间
+/// @return 日期。转化成的日期是零时区时间
++ (NSDate *)dateTimeFromDateString:(NSString *)dateString;
+/// 将字符串日期”2021-03-02“转化成NSDate
+/// yyyy-MM-dd
+/// @param dateString 时间
+/// @return 日期。转化成的日期是零时区时间
++ (NSDate *)dateFromDateString:(NSString *)dateString;
 
 /// date is today
 - (BOOL)isToday;
@@ -44,9 +45,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSDate *)endDate;
 
 /// 日期转化成字符串
-/// yyyy-MM-dd HH:mm:ss
-/// @param style 日期字符串样式
-- (NSString *)dateTimeStringWithStyle:(CATDateStyle)style;
+/// @param dateFormat 日期字符串样式。
+/// @return 字符串日期。转化成的字符串时间是当前时区的
+- (NSString *)dateTimeStringFromDateFormat:(NSString *)dateFormat;
+
+
 
 @end
 

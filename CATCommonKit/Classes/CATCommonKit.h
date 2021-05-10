@@ -61,7 +61,8 @@
 
 #import <CATCommonKit/NSDate+CAT.h>
 
-#import <CATCommonKit/CATHUDUtils.h>
 #import <CATCommonKit/CATDateUtils.h>
+#import <CATCommonKit/CATFileUtils.h>
+#import <CATCommonKit/CATImageUtils.h>
 
 #endif /* CATCommonKit_h */
